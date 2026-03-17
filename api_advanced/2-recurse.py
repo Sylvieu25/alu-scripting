@@ -18,7 +18,9 @@ def recurse(subreddit, hot_list=[], after=None):
         list: List of hot article titles, or None if invalid.
     """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    headers = {"User-Agent": "linux:api_advanced:v1.0 (by /u/api_advanced)"}
+    headers = {
+        "User-Agent": "python:api_advanced:v1.0 (by /u/api_advanced_user)"
+    }
     params = {"limit": 100}
 
     if after:
