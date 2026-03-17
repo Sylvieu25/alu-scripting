@@ -15,7 +15,9 @@ def top_ten(subreddit):
         None
     """
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
-    headers = {"User-Agent": "linux:api_advanced:v1.0 (by /u/api_advanced)"}
+    headers = {
+        "User-Agent": "python:api_advanced:v1.0 (by /u/api_advanced_user)"
+    }
 
     response = requests.get(url, headers=headers, allow_redirects=False)
 
